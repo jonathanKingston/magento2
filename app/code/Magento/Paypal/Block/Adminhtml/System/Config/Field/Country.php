@@ -112,7 +112,7 @@ class Country extends \Magento\Config\Block\System\Config\Form\Field
         ];
         $urlString = $this->_escaper->escapeUrl($this->_url->getUrl('*/*/*', $urlParams));
         $jsString = '
-            $("' . $element->getHtmlId() . '").observe("change", function () {
+            $("' . $element->getHtmlId() . '").on("change", function () {
                 location.href = \'' . $urlString . '\'.replace("__country__", this.value);
             });
         ';
@@ -122,7 +122,7 @@ class Country extends \Magento\Config\Block\System\Config\Form\Field
             $urlString = $this->_escaper->escapeUrl($this->_url->getUrl('*/*/*', $urlParams));
             $jsParentCountry = $this->_escaper->escapeJs($this->_defaultCountry);
             $jsString .= '
-                $("' . $element->getHtmlId() . '_inherit").observe("click", function () {
+                $("' . $element->getHtmlId() . '_inherit").on("click", function () {
                     if (this.checked) {
                         location.href = \'' . $urlString . '\'.replace("__country__", \'' . $jsParentCountry . '\')
                             .replace("__default__", "1");
@@ -132,7 +132,7 @@ class Country extends \Magento\Config\Block\System\Config\Form\Field
         }
 
         return parent::_getElementHtml($element) . $this->_jsHelper->getScript(
-            'require([\'prototype\'], function(){document.observe("dom:loaded", function() {' . $jsString . '});});'
+            'require([\'jquery\'], function($){$.ready(function() {' . $jsString . '});});'
         );
     }
 }

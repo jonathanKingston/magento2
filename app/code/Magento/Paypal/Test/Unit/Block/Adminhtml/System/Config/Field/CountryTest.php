@@ -87,7 +87,7 @@ class CountryTest extends \PHPUnit\Framework\TestCase
         $this->_element->setInherit($inherit);
         $this->_element->setCanUseDefaultValue($canUseDefault);
         $constraints = [
-            new \PHPUnit\Framework\Constraint\StringContains('document.observe("dom:loaded", function() {'),
+            new \PHPUnit\Framework\Constraint\StringContains('$.ready(, function() {'),
             new \PHPUnit\Framework\Constraint\StringContains(
                 '$("' . $this->_element->getHtmlId() . '").observe("change", function () {'
             ),

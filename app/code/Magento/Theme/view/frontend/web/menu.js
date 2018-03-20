@@ -152,7 +152,7 @@ define([
         }
     };
 
-    document.observe('dom:loaded', function () {
+    jQuery.ready(function () {
         //run navigation without delays and with default id="#nav"
         //mainNav();
 

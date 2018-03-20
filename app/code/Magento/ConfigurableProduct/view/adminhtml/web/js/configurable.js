@@ -113,7 +113,7 @@ define([
 
             // Set values to inputs
             this.configureForValues();
-            document.observe('dom:loaded', this.configureForValues.bind(this));
+            jQuery.ready(this.configureForValues.bind(this));
         },
 
         /**
