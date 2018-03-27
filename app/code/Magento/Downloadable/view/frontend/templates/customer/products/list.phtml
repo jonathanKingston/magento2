@@ -39,7 +39,7 @@
                     <td data-th="<?= $block->escapeHtml(__('Title')) ?>" class="col title">
                         <strong class="product-name"><?= $block->escapeHtml($_item->getPurchased()->getProductName()) ?></strong>
                         <?php if ($_item->getStatus() == \Magento\Downloadable\Model\Link\Purchased\Item::LINK_STATUS_AVAILABLE): ?>
-                        <a href="<?= /* @escapeNotVerified */ $block->getDownloadUrl($_item) ?>" title="<?= $block->escapeHtml(__('Start Download')) ?>" class="action download" <?= $block->getIsOpenInNewWindow() ? 'onclick="this.target=\'_blank\'"' : '' ?>><?= $block->escapeHtml($_item->getLinkTitle()) ?></a>
+                        <a href="<?= /* @escapeNotVerified */ $block->getDownloadUrl($_item) ?>" title="<?= $block->escapeHtml(__('Start Download')) ?>" class="action download" <?= $block->getIsOpenInNewWindow() ? 'target="_blank"' : '' ?>><?= $block->escapeHtml($_item->getLinkTitle()) ?></a>
                         <?php endif; ?>
                     </td>
                     <td data-th="<?= $block->escapeHtml(__('Status')) ?>" class="col status"><?= /* @escapeNotVerified */ __(ucfirst($_item->getStatus())) ?></td>

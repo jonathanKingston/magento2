@@ -19,7 +19,7 @@
 <div class="order-title">
     <strong><?= /* @escapeNotVerified */ __('Invoice #') ?><?= /* @escapeNotVerified */ $_invoice->getIncrementId() ?></strong>
     <a href="<?= /* @escapeNotVerified */ $block->getPrintInvoiceUrl($_invoice) ?>"
-       onclick="this.target='_blank'"
+       target="_blank"
        class="action print">
         <span><?= /* @escapeNotVerified */ __('Print Invoice') ?></span>
     </a>

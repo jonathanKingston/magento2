@@ -19,7 +19,7 @@
     <?php endif ?>
     <a class="action print"
        href="<?= /* @escapeNotVerified */ $block->getPrintUrl($_order) ?>"
-       onclick="this.target='_blank';">
+       target="_blank">
         <span><?= /* @escapeNotVerified */ __('Print Order') ?></span>
     </a>
     <?= $block->getChildHtml() ?>

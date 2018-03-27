@@ -14,7 +14,7 @@
         <?= $block->getChildHtml('track-all-link') ?>
     <?php endif; ?>
     <a href="<?= /* @escapeNotVerified */ $block->getPrintAllShipmentsUrl($_order) ?>"
-       onclick="this.target='_blank'"
+       target="_blank"
        class="action print">
         <span><?= /* @escapeNotVerified */ __('Print All Shipments') ?></span>
     </a>
@@ -23,7 +23,7 @@
 <div class="order-title">
     <strong><?= /* @escapeNotVerified */ __('Shipment #') ?><?= /* @escapeNotVerified */ $_shipment->getIncrementId() ?></strong>
     <a href="<?= /* @escapeNotVerified */ $block->getPrintShipmentUrl($_shipment) ?>"
-       onclick="this.target='_blank'"
+       target="_blank"
        class="action print">
         <span><?= /* @escapeNotVerified */ __('Print Shipment') ?></span>
     </a>

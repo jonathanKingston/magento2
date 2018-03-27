@@ -10,7 +10,7 @@
 <?php $_order = $block->getOrder() ?>
 <div class="actions-toolbar">
     <a href="<?= /* @escapeNotVerified */ $block->getPrintAllCreditmemosUrl($_order) ?>"
-       onclick="this.target='_blank'"
+       target="_blank"
        class="action print">
         <span><?= /* @escapeNotVerified */ __('Print All Refunds') ?></span>
     </a>
@@ -19,7 +19,7 @@
 <div class="order-title">
     <strong><?= /* @escapeNotVerified */ __('Refund #') ?><?= /* @escapeNotVerified */ $_creditmemo->getIncrementId() ?> </strong>
     <a href="<?= /* @escapeNotVerified */ $block->getPrintCreditmemoUrl($_creditmemo) ?>"
-       onclick="this.target='_blank'"
+       target="_blank"
        class="action print">
         <span><?= /* @escapeNotVerified */ __('Print Refund') ?></span>
     </a>
